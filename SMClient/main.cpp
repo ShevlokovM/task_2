@@ -22,16 +22,17 @@ int get_request_type()
 			"5. Set emploee position\n"
 			"6. Set emploee chief\n";
 	std::cout << "Input number of request: ";    
-    std::string type = "";    
-    //std::cin.ignore(std::numeric_limits<std::streamsize>::max());
-    int n = 0;
-    while(!std::cin.eof())
-    {
-        std::cin.ignore();
-        std::cout << ++n << "\n";
-    }
-    //std::cin.clear();
-    //std::cin.ignore(200);
+    	std::string type = "";    
+	//std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+	/*
+	int n = 0;
+	while(!std::cin.eof())
+	{
+	std::cin.ignore();
+	std::cout << ++n << "\n";
+	}*/
+	std::cin.clear();
+	std::cin.ignore();
 	std::getline(std::cin, type);
 	
 	while(type != "1" && type != "2" && type != "3" && type != "4" && type != "5" && type != "6")
@@ -46,7 +47,9 @@ int get_request_type()
 			"6. Set emploee chief\n";
 	std::cout << "Input number of request: ";
     type = "";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+    //std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+    	std::cin.clear();
+	std::cin.ignore();
 	std::getline(std::cin, type);
 	}
 	return std::stoi(type);
